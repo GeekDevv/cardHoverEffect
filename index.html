@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Card Hover Effect</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(20,20,20);
+            color: antiquewhite;
+        }
+        article.main{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+        figure.card{
+            width: 500px;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+        figure.card-1{
+            background-image: url('/background-1.jpg');
+            background-position: center;
+            background-size: 100%;
+        }
+        figure.card-1 figcaption{
+            width: 100%;
+            background-color: black;
+            padding: 10px 5px;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(100px);
+            transition: 0.3s ease;
+        }
+        figure.card-1:hover{
+            background-position: bottom;
+        }
+        figure.card-1:hover figcaption{
+            transform: translateY(0px);
+        }
+        figure.card-2{
+            background-image: url('/background-2.jpg');
+            background-position: center;
+            background-size: 120%;
+        }
+        figure.card-2 figcaption{
+            background-color: black;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            transform: translateX(150px);
+            transition: 0.3s ease;
+        }
+        figure.card-2:hover{
+            background-position: right;
+        }
+        figure.card-2:hover figcaption{
+            transform: translateX(0px);
+        }
+    </style>
+</head>
+<body>
+    
+    <article class="main">
+
+        <figure class="card card-1">
+            <figcaption>
+                <div class="description">
+                    <h2 class="title">Title 1</h2>
+                    <span class="text">by @WDL</span>
+                </div>
+            </figcaption>
+        </figure>
+
+        <figure class="card card-2">
+            <figcaption>
+                <div class="description">
+                    <h2 class="title">Title 1</h2>
+                    <span class="text">by @WDL</span>
+                </div>
+            </figcaption>
+        </figure>
+
+    </article>
+
+</body>
+</html>
